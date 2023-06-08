@@ -1,0 +1,158 @@
+/* Header Start */
+.header .top-navbar > ul > li {
+    @apply relative flex items-center gap-[10px]
+}
+.header .top-navbar > ul > li > a {
+    @apply text-white-100 xlscreen:text-15 xlscreen:leading-[1.2] text-[30px] leading-[1] font-400 font-primary relative capitalize hover:text-blue-100 duration-300 delay-150 ease-linear;
+}
+/* .header .top-navbar > ul > li > a:before {
+    content: "";
+    @apply absolute bottom-[-4px] right-0 w-0 h-[1px] bg-white-100 duration-300 delay-150 ease-linear;
+}
+.header .top-navbar > ul > li > a:hover:before {
+    @apply w-full left-0;
+} */
+
+.header .top-navbar > ul > li ul.sub-menu {
+    @apply opacity-0 invisible -z-9 absolute bg-white-200 top-[100%] left-50per translate-x-minus_50 translate-y-[35px] w-full min-w-max rounded-4 text-center  px-30 pb-20 duration-300 delay-150 ease-linear;
+}
+.header .top-navbar > ul > li ul.sub-menu {
+    @apply before:content-[''] before:absolute before:-top-[12px] before:w-[30px] before:left-50per before:border-l-[14px] before:border-r-[14px] before:border-l-transparent before:border-r-transparent before:border-b-[12px] before:border-solid before:border-white-200 before:translate-x-minus_50;
+}
+.header .top-navbar > ul > li:hover ul.sub-menu {
+    @apply opacity-100 visible z-1 translate-y-[25px];
+}
+.header .top-navbar > ul > li ul.sub-menu li {
+    @apply mb-15 last:mb-0
+}
+.header .top-navbar > ul > li ul.sub-menu li:nth-last-of-type(2) {
+    @apply mb-[28px]
+}
+.header .top-navbar > ul > li ul.sub-menu li a {
+    @apply  uppercase text-14 leading-16 tracking-012em font-400 font-primary relative before:content-[''] before:absolute before:-bottom-6 before:right-0 before:w-0  before:h-[1px] before:duration-300 before:delay-150 before:ease-linear hover:before:w-full hover:before:left-0;
+}
+.header .top-navbar > ul > li ul.sub-menu li a.btn-b-blue {
+    @apply text-10 leading-12 font-700 py-[13px] px-25 text-blue-300 hover:text-white-100 before:hidden
+}
+.hamburger {
+    @apply relative z-99
+}
+/* Header End */
+
+.menu-open {
+    @apply overflow-hidden;
+}
+
+.menu-open .header .top-navbar ul {
+    @apply invisible transition-all duration-300;
+}
+
+
+.header .menu-line svg,
+.menu-open .header .menu-line svg {
+    @apply transition-all duration-500;
+}
+
+/* .menu-open .header .menu-line svg {
+    @apply w-[90%];
+} */
+
+.menu-open .header .menu-line svg:nth-child(1) {
+    @apply rounded-[0px];
+    transform: translateY(6px) rotate(45deg);
+}
+
+.menu-open .header .menu-line svg:nth-child(2) {
+    @apply opacity-0 min-w-0;
+}
+
+.menu-open .header .menu-line svg:nth-child(3) {
+    @apply rounded-[0px];
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.menu-open .mainNav__wrap--inner .img {
+    @apply smscreen2:hidden;
+}
+
+.main-nav {
+    @apply fixed w-full h-screen top-0 -z-1 hidden;
+}
+
+.main-nav .navMenu li {
+    @apply relative;
+}
+
+.main-nav .navMenu li a {
+    @apply text-blue-200 text-[50px] leading-[60px] font-primary font-400 capitalize relative duration-300 delay-150 ease-linear hover:text-blue-100;
+}
+.main-nav .navMenu:last-child li {
+    @apply block mb-[12px] last:mb-0
+}
+.main-nav .navMenu:last-child li a {
+    @apply text-14 leading-19 font-secondary font-500 tracking-04em p-0 m-0 block;
+}
+
+.mainNav-contact a {
+    @apply text-blue-100 text-opacity-[0.75] text-14 leading-19 tracking-04em font-secondary_normal font-400 relative duration-300 delay-150 ease-linear hover:text-opacity-100;
+}
+
+
+.main-nav .img {
+    @apply relative h-full overflow-hidden block w-full; /*.main-nav .img img*/
+}
+
+.main-nav .img img {
+    @apply absolute top-0 left-0 right-0 bottom-0;
+}
+
+.header-absolute {
+    @apply absolute top-0 ;
+}
+
+.header-sticky {
+    @apply fixed w-full bg-blue-300 bg-opacity-80 transition-all duration-500 backdrop-blur;
+}
+.header-sticky .logo img.logo-blue {
+    filter: grayscale(1) invert(1);
+}
+
+.header-sticky .menu-line span.line {
+    @apply bg-white-100;
+}
+
+.header-sticky .top-navbar > ul > li:hover ul.sub-menu {
+    @apply bg-blue-300
+}
+.header-sticky .top-navbar > ul > li ul.sub-menu::before {
+    @apply border-b-blue-300
+}
+.header-sticky .top-navbar > ul > li ul.sub-menu li a {
+    @apply text-white-100
+}
+.header-sticky .top-navbar > ul > li ul.sub-menu li .btn-b-blue {
+    @apply border-white-100 hover:bg-white-100 hover:text-blue-300
+}
+.header-sticky .top-navbar > ul > li ul.sub-menu li a::before {
+    @apply bg-white-100
+}
+
+.sticky-logo {
+    @apply hidden;
+}
+
+.book-icon {
+    @apply hidden;
+}
+
+.header-sticky .book-icon {
+    @apply ipad:block;
+}
+
+.header-sicon ul li a {
+    @apply flex items-center justify-center duration-300 delay-150 ease-linear opacity-60;
+}
+
+.header-sicon ul li a:hover {
+    @apply opacity-100 duration-300 delay-150 ease-linear;
+}

@@ -1,0 +1,102 @@
+/* Footer Start */
+footer .instagram .img {
+  @apply relative pt-[100%];
+}
+
+footer .instagram .img img {
+  @apply absolute top-0 left-0 right-0 bottom-0 w-full h-full object-cover;
+}
+
+footer .instagram .instagram-content .content p {
+  @apply mt-5;
+}
+
+footer .newsletter .content p {
+  @apply mt-0;
+}
+
+footer .gform_wrapper ul {
+  @apply flex flex-row gap-5 lg:gap-x-[46px] md:gap-x-5 smscreen2:flex-col;
+}
+
+footer .gform_wrapper ul li {
+  @apply w-full;
+}
+
+footer .gform_wrapper ul li {
+  @apply w-full lg:w-[200px] lg:max-w-[200px];
+}
+
+footer .gform_wrapper ul li input {
+  @apply bg-transparent border-b-1 border-solid border-white-100 w-full text-14 font-secondary_normal font-400 focus:placeholder:text-opacity-50;
+}
+
+footer .gform_wrapper .gform_footer button span {
+  @apply pl-[35px] pr-[37px]
+}
+
+footer .footer-navbar ul li {
+  @apply text-center relative;
+}
+
+footer .footer-navbar ul li a {
+  @apply text-blue-200 font-secondary text-14 leading-19 font-500 tracking-04em relative uppercase block duration-300 delay-150 ease-linear;
+}
+footer .footer-navbar ul:first-child li a {
+  @apply text-blue-200 capitalize font-primary text-42 leading-[60px] font-400 lgscreen:text-[20px] lgscreen:leading-38;
+}
+footer .footer-navbar ul li a:hover {
+  @apply text-blue-100;
+}
+
+footer .footer-right .footer-contact span {
+  @apply text-blue-100 text-24 leading-19 font-400 lowercase relative block opacity-75 duration-300 delay-150 ease-linear hover:opacity-100;
+}
+
+footer .footer-right .footer-contact span a {
+  @apply text-blue-100 text-14 leading-19 font-400 lowercase relative block;
+}
+
+
+.footer .footer-info .content p {
+  @apply text-14;
+}
+
+.sicon ul li a {
+  @apply flex items-center justify-center opacity-60 duration-300 delay-150 ease-linear;
+}
+
+.sicon ul li a svg circle {
+  @apply duration-300 delay-150 ease-linear;
+}
+
+.sicon ul li a:hover {
+  @apply opacity-100;
+}
+
+.sicon ul li a:hover svg circle {
+  @apply fill-blue-100;
+}
+
+footer .footer-btm-right ul li {
+  @apply relative;
+}
+
+footer .footer-btm-right ul li:last-child::before {
+  @apply hidden;
+}
+
+footer .footer-btm-right ul li::before {
+  content: "";
+  @apply absolute right-[-15px] top-[7px] w-[1px] h-[12px] bg-white-100;
+}
+
+footer .footer-btm-right ul li a {
+  @apply text-white-100 uppercase text-[8px] font-400 font-primary tracking-05em smscreen2:text-12;
+}
+
+.footer.bg-footer-pattern:before {
+  @apply top-0 left-50per translate-x-minus_50 bottom-0 w-full max-w-[852px] h-full min-h-[755px] opacity-[0.03];
+}
+
+/* Footer End */
