@@ -94,7 +94,7 @@
 }
 
 .mainNav-contact a {
-    @apply text-blue-100 text-opacity-[0.75] text-14 leading-19 tracking-04em font-secondary_normal font-400 relative duration-300 delay-150 ease-linear hover:text-opacity-100;
+    @apply text-blue-100 text-opacity-[0.75] text-14 leading-19 tracking-04em font-book font-400 relative duration-300 delay-150 ease-linear hover:text-opacity-100;
 }
 
 

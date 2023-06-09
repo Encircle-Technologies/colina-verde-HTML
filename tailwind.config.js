@@ -13,7 +13,9 @@ module.exports = {
         fontFamily: {
             primary: ['Golden-Plains'],
             secondary: ['Avenir'],
-            secondary_normal: ['Avenir-Book'],
+            roman: ['Avenir-roman'],
+            book: ['Avenir-book'],
+            bold: ['Avenir-black'],
         },
         flex: {
             '1': '1 1 0%',

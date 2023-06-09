@@ -24,7 +24,7 @@ footer .gform_wrapper ul li {
 }
 
 footer .gform_wrapper ul li input {
-  @apply bg-transparent border-b-1 border-solid border-white-100 w-full text-white-100 text-14 font-secondary_normal font-400 focus:placeholder:text-opacity-50;
+  @apply bg-transparent border-b-1 border-solid border-white-100 w-full text-white-100 text-14 font-book font-400 focus:placeholder:text-opacity-50;
 }
 
 footer .gform_wrapper .gform_footer button span {

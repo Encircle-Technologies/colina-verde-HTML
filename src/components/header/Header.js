@@ -49,7 +49,7 @@ const Header = () => {
     return (
         <React.Fragment>
             <header className={`header absolute z-99 w-full py-20 transition-all duration-500 ${ scrollDirection === "down" ? "!-top-[100px]" : "!top-0"} ${ scrollDirection === "up" ? "header-sticky" : ""}`} id="HeaderSticky">
-                <div className="container-fluid lg:px-70">
+                <div className="container-fluid">
                     <div className="flex flex-wrap items-center mdscreen:justify-between gap-x-5 w-full">
                         <div className="top-navbar flex flex-wrap items-center gap-x-8 mdscreen:pl-0 max_width_768:mr-[190px] mdscreen:order-2">
                             <div className={`hamburger flex items-center cursor-pointer cursor-scale`}>

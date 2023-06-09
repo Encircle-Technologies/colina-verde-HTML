@@ -99,17 +99,17 @@ function Footer() {
                   <ul>
                     <li>
                       <div className='form-group flex flex-wrap'>
-                        <input type="text" className='placeholder:text-white-100 placeholder:font-secondary_normal placeholder:font-400 placeholder:text-12 placeholder:leading-16 placeholder:uppercase placeholder:text-opacity-95 pb-[8px] outline-none' placeholder='First Name' />
+                        <input type="text" className='placeholder:text-white-100 placeholder:font-book placeholder:font-400 placeholder:text-12 placeholder:leading-16 placeholder:uppercase placeholder:text-opacity-95 pb-[8px] outline-none' placeholder='First Name' />
                       </div>
                     </li>
                     <li>
                       <div className='form-group flex flex-wrap'>
-                        <input type="text" className='placeholder:text-white-100 placeholder:font-secondary_normal placeholder:font-400 placeholder:text-12 placeholder:leading-16 placeholder:uppercase placeholder:text-opacity-95 pb-[8px] outline-none' placeholder='Last Name' />
+                        <input type="text" className='placeholder:text-white-100 placeholder:font-book placeholder:font-400 placeholder:text-12 placeholder:leading-16 placeholder:uppercase placeholder:text-opacity-95 pb-[8px] outline-none' placeholder='Last Name' />
                       </div>
                     </li>
                     <li>
                       <div className='form-group flex flex-wrap'>
-                        <input type="text" className='placeholder:text-white-100 placeholder:font-secondary_normal placeholder:font-400 placeholder:text-12 placeholder:leading-16 placeholder:uppercase placeholder:text-opacity-95 pb-[8px] outline-none' placeholder='Email address' />
+                        <input type="text" className='placeholder:text-white-100 placeholder:font-book placeholder:font-400 placeholder:text-12 placeholder:leading-16 placeholder:uppercase placeholder:text-opacity-95 pb-[8px] outline-none' placeholder='Email address' />
                       </div>
                     </li>
                   </ul>
