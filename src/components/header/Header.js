@@ -50,8 +50,8 @@ const Header = () => {
         <React.Fragment>
             <header className={`header absolute z-99 w-full py-20 transition-all duration-500 ${ scrollDirection === "down" ? "!-top-[100px]" : "!top-0"} ${ scrollDirection === "up" ? "header-sticky" : ""}`} id="HeaderSticky">
                 <div className="container-fluid lg:px-70">
-                    <div className="flex flex-wrap items-center gap-x-5 w-full">
-                        <div className="top-navbar flex flex-wrap items-center gap-x-8 mdscreen:pl-0">
+                    <div className="flex flex-wrap items-center mdscreen:justify-between gap-x-5 w-full">
+                        <div className="top-navbar flex flex-wrap items-center gap-x-8 mdscreen:pl-0 max_width_768:mr-[190px] mdscreen:order-2">
                             <div className={`hamburger flex items-center cursor-pointer cursor-scale`}>
                                 <div className="menu-line flex flex-col cursor-pointer gap-1">
                                     <svg width="28" height="2" viewBox="0 0 28 2" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,13 +74,13 @@ const Header = () => {
                                 <li><Link to="/">Location</Link></li>
                             </ul>
                         </div>
-                        <div className="logo lg:mx-auto">
+                        <div className="logo md:mx-auto mdscreen:order-1">
                             <Link to="/" className="block">
                                 <img src="../images/logo.svg" className='mx-auto max-w-full mdscreen:max-w-[170px] cursor-scale' width={133} height={63} alt="Logo" loading='eager' />
                             </Link>                            
                         </div>
-                        <div className="btn-custom relative lg:ml-[62px] xl:ml-[124px]">
-                            <button className="btn btn-blue-100 cursor-pointer block mdscreen:hidden">
+                        <div className="btn-custom relative lg:ml-[62px] xl:ml-[124px] mdscreen:hidden">
+                            <button className="btn btn-blue-100 cursor-pointer block">
                                 <span>Make An Enquiry</span>
                             </button>
                         </div>

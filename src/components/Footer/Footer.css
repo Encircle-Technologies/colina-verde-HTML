@@ -16,19 +16,15 @@ footer .newsletter .content p {
 }
 
 footer .gform_wrapper ul {
-  @apply flex flex-row gap-5 lg:gap-x-[46px] md:gap-x-5 smscreen2:flex-col;
+  @apply flex flex-row gap-5 xl:gap-x-[46px] md:gap-x-5 mdscreen:flex-col;
 }
 
 footer .gform_wrapper ul li {
   @apply w-full;
 }
 
-footer .gform_wrapper ul li {
-  @apply w-full lg:w-[200px] lg:max-w-[200px];
-}
-
 footer .gform_wrapper ul li input {
-  @apply bg-transparent border-b-1 border-solid border-white-100 w-full text-14 font-secondary_normal font-400 focus:placeholder:text-opacity-50;
+  @apply bg-transparent border-b-1 border-solid border-white-100 w-full text-white-100 text-14 font-secondary_normal font-400 focus:placeholder:text-opacity-50;
 }
 
 footer .gform_wrapper .gform_footer button span {

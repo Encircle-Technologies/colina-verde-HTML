@@ -47,11 +47,11 @@ function Footer() {
                   </Link>
                 </div>
 
-                <div className='footer-contact flex flex-wrap items-center justify-center pt-40 pb-15 gap-4'>
+                <div className='footer-contact flex flex-wrap xsscreen:flex-col items-center justify-center pt-40 pb-15 gap-4'>
                   <span>
                     <Link to="tel:+258 84 278 0071">+258 84 278 0071</Link>
                   </span>
-                  <span>|</span>
+                  <span className='xsscreen:!hidden'>|</span>
                   <span>
                     <Link to="mailto:info@colinaverdemoz.com">info@colinaverdemoz.com</Link>
                   </span>
@@ -83,44 +83,37 @@ function Footer() {
           </div>
         </div>
       </div>
-      {/* <div className='footer-btm py-10 bg-blue-300'>
-        <div className='container-fluid-md'>
-          <div className='flex flex-wrap items-center justify-center ipad:flex-col ipad:gap-y-2 w-ful'>
-            <p>© Santorini Mozambique . All rights reserved .</p>
-            <ul className='flex gap-x-5 justify-end ml-5 ipad:ml-0'>
-              <li><Link to="/" className='text-white-100 text-12 leading-19 font-primary font-300 tracking-06em capitalize'>terms & conditions</Link></li>
-              <li><Link to="/" className='text-white-100 text-12 leading-19 font-primary font-300 tracking-06em capitalize'>privacy policy</Link></li>              
-            </ul>
-          </div>
-        </div>
-      </div> */}
       <div className='newsletter py-[23px] bg-blue-200 bg-opacity-60'>
         <div className='container-fluid-md'>
           <div className='gform_wrapper'>
-            <div className='flex flex-wrap justify-between mdscreen:justify-center smscreen2:flex-col gap-5'>
-              <div className='title title-white'>
-                <h6 className='big'>
-                  Sign up to our newsletter
-                </h6>
+            <div className='flex flex-wrap items-center justify-start lgscreen:justify-center smscreen2:flex-col gap-6 xl:gap-10'>
+              <div className='lgscreen:w-full lgscreen:text-center inline-block'>
+                <div className='title title-white'>
+                  <h6 className='big'>
+                    Sign up to our newsletter
+                  </h6>
+                </div>
               </div>
-              <div className='gform_body'>
-                <ul>
-                  <li>
-                    <div className='form-group flex flex-wrap'>
-                      <input type="text" className='placeholder:text-white-100 placeholder:font-secondary_normal placeholder:font-400 placeholder:text-12 placeholder:leading-16 placeholder:uppercase placeholder:text-opacity-95 pb-[8px] outline-none' placeholder='First Name' />
-                    </div>
-                  </li>
-                  <li>
-                    <div className='form-group flex flex-wrap'>
-                      <input type="text" className='placeholder:text-white-100 placeholder:font-secondary_normal placeholder:font-400 placeholder:text-12 placeholder:leading-16 placeholder:uppercase placeholder:text-opacity-95 pb-[8px] outline-none' placeholder='Last Name' />
-                    </div>
-                  </li>
-                  <li>
-                    <div className='form-group flex flex-wrap'>
-                      <input type="text" className='placeholder:text-white-100 placeholder:font-secondary_normal placeholder:font-400 placeholder:text-12 placeholder:leading-16 placeholder:uppercase placeholder:text-opacity-95 pb-[8px] outline-none' placeholder='Email address' />
-                    </div>
-                  </li>
-                </ul>
+              <div className='xl:max-w-[calc(100%_-_507px)] lg:max-w-[calc(100%_-_467px)] w-full'>
+                <div className='gform_body w-full'>
+                  <ul>
+                    <li>
+                      <div className='form-group flex flex-wrap'>
+                        <input type="text" className='placeholder:text-white-100 placeholder:font-secondary_normal placeholder:font-400 placeholder:text-12 placeholder:leading-16 placeholder:uppercase placeholder:text-opacity-95 pb-[8px] outline-none' placeholder='First Name' />
+                      </div>
+                    </li>
+                    <li>
+                      <div className='form-group flex flex-wrap'>
+                        <input type="text" className='placeholder:text-white-100 placeholder:font-secondary_normal placeholder:font-400 placeholder:text-12 placeholder:leading-16 placeholder:uppercase placeholder:text-opacity-95 pb-[8px] outline-none' placeholder='Last Name' />
+                      </div>
+                    </li>
+                    <li>
+                      <div className='form-group flex flex-wrap'>
+                        <input type="text" className='placeholder:text-white-100 placeholder:font-secondary_normal placeholder:font-400 placeholder:text-12 placeholder:leading-16 placeholder:uppercase placeholder:text-opacity-95 pb-[8px] outline-none' placeholder='Email address' />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div className='gform_footer'>
                 <button className="btn btn-white cursor-pointer">

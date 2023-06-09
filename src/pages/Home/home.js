@@ -141,13 +141,13 @@ function Home() {
 										Surrounded by nature's tranquility and beauty, guests can escape the stress of everyday life and indulge in a luxurious and unforgettable experience.
 									</p>
 								</div>
-								<div className='btn-custom flex flex-wrap items-center justify-center w-full gap-[30px]'>
-									<Link to="#" className='btn btn-blue-200 xsscreen2:order-2'>
+								<div className='btn-custom flex flex-wrap items-center justify-center w-full gap-5 md:gap-[30px]'>
+									<Link to="#" className='btn btn-blue-200 smscreen:order-2'>
 										<span>
 											Read Our story
 										</span>
 									</Link>
-									<Button className='btn btn-blue-200-link xsscreen2:order-1 mt-[9px]' onClick={() => { openModal(); }}>
+									<Button className='btn btn-blue-200-link smscreen:order-1 mt-[9px]' onClick={() => { openModal(); }}>
 										Watch full video
 									</Button>
 									<Modal
@@ -288,13 +288,13 @@ function Home() {
 			<section className='zigzag-content zigzagmb left-img py-50  my-50'>
 				<div className='container-fluid-md'>
 					<div className='flex flex-wrap items-center w-full m-0 p-0 relative lg:gap-0 gap-8'>
-						<div className='w-full xxl:w-7/12 lg:w-6/12 lg:order-1 order-1'>
+						<div className='w-full xl:w-7/12 lg:w-6/12 lg:order-1 order-1'>
 							<div className='img landscape'>
 								<img src="../images/endless-adventures.jpg" width={752} height={484} loading="lazy" alt="Endless Adventures" />
 							</div>
 						</div>
-						<div className='w-full xxl:w-5/12 lg:w-6/12 lg:order-2 order-2'>
-							<div className='max-w-[425px] lgscreen:max-w-full mx-auto text-center'>
+						<div className='w-full xl:w-5/12 lg:w-6/12 lg:order-2 order-2'>
+							<div className='max-w-[425px] xlscreen:max-w-[325px] lgscreen:max-w-full mx-auto text-center'>
 								<div className='title title-blue-100 mb-25 lgscreen:mb-15'>
 									<h2>
 										Endless Adventures
@@ -319,13 +319,13 @@ function Home() {
 			<section className='zigzag-content zigzagmt right-img py-50 my-50'>
 				<div className='container-fluid-md'>
 					<div className='flex flex-wrap items-center w-full m-0 p-0 relative lg:gap-0 gap-8'>
-						<div className='w-full xxl:w-7/12 lg:w-6/12 lg:order-2 order-1'>
+						<div className='w-full xl:w-7/12 lg:w-6/12 lg:order-2 order-1'>
 							<div className='img landscape'>
 								<img src="../images/exquisite-cuisine.jpg" width={752} height={484} loading="lazy" alt="Exquisite Cuisine" />
 							</div>
 						</div>
-						<div className='w-full xxl:w-5/12 lg:w-6/12 lg:order-1 order-2'>
-							<div className='max-w-[425px] lgscreen:max-w-full mx-auto text-center'>
+						<div className='w-full xl:w-5/12 lg:w-6/12 lg:order-1 order-2'>
+							<div className='max-w-[425px] xlscreen:max-w-[325px] lgscreen:max-w-full mx-auto text-center'>
 								<div className='title title-blue-100 mb-25 lgscreen:mb-15'>
 									<h2>
 										Exquisite Cuisine

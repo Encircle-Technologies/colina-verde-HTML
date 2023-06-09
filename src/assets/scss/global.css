@@ -450,7 +450,7 @@
     @apply relative block w-full h-full object-cover
   }
   .zigzag-content .landscape img {
-    @apply h-[484px];
+    @apply lg:h-[484px];
   }  
   /* zigzag-content End */
 
