@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../components/header/Header';
 import Footer from '../../components/Footer/Footer';
 
+import Modal from "react-modal";
+import ReactPlayer from "react-player";
+
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
@@ -14,7 +17,38 @@ import "swiper/css/pagination";
 
 import { EffectCoverflow, Navigation, Autoplay } from "swiper";
 
-function Dining() {
+function Story() {
+	const [modalIsOpen, setIsOpen] = React.useState(false);
+	function openModal(data) {
+		document.body.classList.add("modal-open");
+		setIsOpen(true);
+	}
+
+	function closeModal() {
+		document.body.classList.remove("modal-open");
+		setIsOpen(false);
+	}
+
+	const customStyles = {
+		content: {
+			top: "50%",
+			left: "50%",
+			right: "auto",
+			bottom: "auto",
+			marginRight: "-50%",
+			transform: "translate(-50%, -50%)",
+			// width: "930px",
+			padding: "0",
+			border: "0",
+			borderRadius: "0",
+			width: "100%",
+			height: "100%",
+			backgroundColor: "black",
+		},
+		overlay: {
+			zIndex: "99",
+		},
+	};
 
     const handleNextClick = (selector) => {
 		const swiper = document.querySelector(selector).swiper;
@@ -32,13 +66,13 @@ function Dining() {
 			<section className="banner-wrapper small-banner relative">
 				<div className="banner-img w-full h-full block relative overflow-hidden">
 					<div className='img landscape'>
-						<img src="../images/dining-banner.jpg" className='w-full h-full object-cover' width={1440} height={838} alt="Dining" loading='eager' />
+						<img src="../images/story-banner.jpg" className='w-full h-full object-cover' width={1440} height={838} alt="Our Story" loading='eager' />
 					</div>
 				</div>
 				<div className="banner-content flex flex-col justify-end items-center w-full h-full z-1 absolute top-0 left-0">
 					<div className='container-fluid text-center w-full'>
 						<div className='banner-heading'>
-							<h1 className="text-white-100 font-400 font-primary">Dining</h1>
+							<h1 className="text-white-100 font-400 font-primary">Our Story</h1>
 						</div>
 						<div className='content white w-full md:max-w-[696px] mx-auto mb-25'>
 							<p>
@@ -52,33 +86,94 @@ function Dining() {
 			{/* Banner End */}
 
             {/* zigzagsingleslider Start */}
-			<section className='zigzag-content right-img py-50 my-50 lgscreen:my-25 lgscreen:py-25'>
+			<section className='zigzag-content left-img bg-white-300 py-100 lgscreen:py-50'>
 				<div className='container-fluid-md'>
 					<div className='flex flex-wrap items-center w-full m-0 p-0 relative lg:gap-0 gap-8'>
 						<div className='w-full lg:w-6/12 lg:order-1 order-1'>
 							<div className='img portrait'>
-								<img src="../images/a-unique-culinary-experience.jpg" width={635} height={631} loading="lazy" alt="A unique culinary experience" />
+								<img src="../images/a-unique-culinary-experience.jpg" width={635} height={631} loading="lazy" alt="Your luxury home in Africa" />
 							</div>
 						</div>
 						<div className='w-full lg:w-6/12 lg:order-2 order-2'>
 							<div className='max-w-[473px] xlscreen:max-w-[325px] lgscreen:max-w-full mx-auto'>
 								<div className='title title-blue-100 mb-25 lgscreen:mb-15'>
 									<h2>
-										A unique culinary experience
+										Your luxury home in Africa
 									</h2>
 								</div>
 								<div className='content blue-100 mb-40 last:mb-0'>
 									<p>
-										Our cuisine is lovingly prepared by our chef utilizing fresh and healthy local ingredients. Our menu has an emphasis on seafood and includes elements from our own vegetable garden when in season. Meals are served at different locations around the house and are always an occasion. Everyday we serve an afternoon cake daily in the lobby and tempting bites served with sundowner cocktails in the evenings. Guests can help themselves to Nespresso coffee and a wide selection of teas whenever they wish. Dietary accommodations can be made upon request at time of booking.
+										Everyday life can be overwhelming...Overstimulating... Overbearing...But this isn’t your everyday. It’s an escape — A home built just for you. A place to recharge, rethink, and replenish your soul. Somewhere safe for you to daydream, inhale and exhale.It’s a space for discovery — to connect to (or disconnect from) everything and everyone, all at once. A place for you to stay grounded or free-fall into the unknown.It’s a community — built from the hands and knowledge of those who greet you at the door. Our family, our friends.
+									</p>
+									<p>
+										This is Colina Verde
 									</p>
 								</div>
-								<div className='btn-custom'>
-									<Link to="#" className='btn btn-blue-200'>
-                                        <span>
+								<div className='btn-custom flex flex-wrap items-center justify-start w-full gap-5 md:gap-[30px]'>
+									<Link to="#" className='btn btn-blue-200 smscreen:order-2'>
+										<span>
                                             make an enquiry
-                                        </span>
+										</span>
 									</Link>
+									<Button className='btn btn-blue-200-link smscreen:order-1 mt-[9px] !flex flex-wrap items-center gap-[5px]'  onClick={() => { openModal(); }}>
+										Watch our video
+									</Button>
+									<Modal
+										isOpen={modalIsOpen}
+										style={customStyles}
+										onRequestClose={closeModal}
+										contentLabel="Example Modal"
+									>
+										<div className='video-modal-popup h-full'>
+											<button onClick={closeModal} className="absolute z-1 right-50 top-50 bg-white-100 flex items-center justify-center w-50 h-50 rounded-100">
+												<img src="../images/close.svg" width={21} height={16} />
+											</button>
+											<div className="flex flex-wrap items-center w-full h-full">
+												<div className="w-full h-full">
+													<div className="modal-video h-full">
+														<ReactPlayer
+															className="modal-banner-video !w-full !h-full"
+															loop={true}
+															playing={true}
+															controls={false}
+															muted={true}
+															url={"https://www.youtube.com/watch?v=tu4cG_BKTZs"}
+														/>
+													</div>
+												</div>
+											</div>
+										</div>
+									</Modal>
 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* zigzagsingleslider End */}
+
+			{/* zigzagsingleslider Start */}
+			<section className='zigzag-content right-img py-50 my-50 lgscreen:my-25 lgscreen:py-25'>
+				<div className='container-fluid-md'>
+					<div className='flex flex-wrap items-center w-full m-0 p-0 relative lg:gap-0 gap-8'>
+						<div className='w-full lg:w-6/12 lg:order-2 order-1'>
+							<div className='img portrait'>
+								<img src="../images/Meet-our-incredible-colina-Verde-team.jpg" width={635} height={631} loading="lazy" alt="Meet our incredible colina Verde team" />
+							</div>
+						</div>
+						<div className='w-full lg:w-6/12 lg:order-1 order-2'>
+							<div className='max-w-[473px] xlscreen:max-w-[325px] lgscreen:max-w-full mx-auto'>
+								<div className='title title-blue-100 mb-25 lgscreen:mb-15'>
+									<h2>
+										Meet our incredible colina Verde team
+									</h2>
+								</div>
+								<div className='content blue-100 mb-40 last:mb-0'>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									</p>
+								</div>
+								
 							</div>
 						</div>
 					</div>
@@ -89,42 +184,46 @@ function Dining() {
 			{/* collection slider Start */}
 			<section className='fullbx-slider fullbx-m-none relative overflow-hidden'>
                 <Swiper
-					autoplay={{
-						delay: 2500,
-						disableOnInteraction: false,
-					}}
+					initialSlide={2}
 					spaceBetween={30}
-					speed={1500}
 					loop={true}
+					slidesPerGroup={1}
+					slideToClickedSlide={true}
+					slidesPerView={'3'}
 					centeredSlides={true}
-					slidesPerView={1.61}
+					centeredSlidesBounds={true}
 					navigation={false}
 					breakpoints={{
 						320: {
 							slidesPerView: 1,
 						},
 						640: {
-							slidesPerView: 1.65,
+							slidesPerView: 3,
 						},
 						991: {
-							slidesPerView: 2.64,
+							slidesPerView: 3,
 						},
 					}}
 					modules={[EffectCoverflow, Navigation, Autoplay]}
-					className="experienceSlider">
+					className="storySlider">
 					<SwiperSlide>
 						<div className='slide-box'>
-							<img src='../images/experienceslide-3.jpg' width={525} height={304} loading="lazy" alt="experienceslide"/>
+							<img src='../images/story-slide1.jpg' width={389} height={458} loading="lazy" alt="experienceslide"/>
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
 						<div className='slide-box'>
-							<img src='../images/experienceslide-1.jpg' width={525} height={304} loading="lazy" alt="experienceslide"/>
+							<img src='../images/story-slide2.jpg' width={389} height={458} loading="lazy" alt="experienceslide"/>
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
 						<div className='slide-box'>
-							<img src='../images/experienceslide-2.jpg' width={525} height={304} loading="lazy" alt="experienceslide"/>
+							<img src='../images/story-slide3.jpg' width={389} height={458} loading="lazy" alt="experienceslide"/>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className='slide-box'>
+							<img src='../images/story-slide4.jpg' width={389} height={458} loading="lazy" alt="experienceslide"/>
 						</div>
 					</SwiperSlide>
 					<div className='swiper-arrow'>
@@ -296,4 +395,4 @@ function Dining() {
 	);
 }
 
-export default Dining
+export default Story
