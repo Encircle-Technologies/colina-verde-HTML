@@ -182,15 +182,15 @@
   }
 
   .btn-white span {
-    @apply inline-block relative pt-[17px] pb-[17px] pl-[39px] pr-[40px]
+    @apply inline-block relative pt-[18px] pb-[16px] pl-[39px] pr-[40px]
   }
   .btn-white span:before {
     content: "";
-    @apply absolute top-0 left-[0.5px] bg-[url(/public/images/b-left-white-pattern.svg)] w-[2px] h-full bg-right bg-no-repeat bg-auto;
+    @apply absolute top-0 left-[0.5px] bg-[url(/public/images/b-left-white-pattern.svg)] w-[3px] h-full bg-right bg-no-repeat bg-auto;
   }
   .btn-white span:after {
     content: "";
-    @apply absolute top-0 right-[0.5px] bg-[url(/public/images/b-right-white-pattern.svg)] w-[2px] h-full bg-left bg-no-repeat bg-auto;
+    @apply absolute top-0 right-[0.5px] bg-[url(/public/images/b-right-white-pattern.svg)] w-[3px] h-full bg-left bg-no-repeat bg-auto;
   }
 
   .btn-blue-200-link {
@@ -480,6 +480,12 @@
   .experienceSlider .slide-box > img {
     @apply w-full h-full object-cover;
   }
+  .storySlider .swiper-wrapper {
+    @apply mx-auto ipad:max-w-full max-w-[72%]
+  }
+  .storySlider .slide-box {
+    @apply h-[458px]
+  }
   /* Center-flow-slider End */
 
   /* zigzag-content Start */
@@ -488,6 +494,9 @@
   }
   .zigzagmt {
     @apply mt-0 lgscreen:mt-0 lgscreen:my-25 lgscreen:py-25;
+  }
+  .zigzagpt {
+    @apply pt-0 lgscreen:pt-0 lgscreen:py-25;
   }
   .zigzag-content .img {
     @apply block relative m-0 p-0 w-full;
@@ -520,11 +529,14 @@
   /* zigzag-content End */
 
   /* fullbx-slider Start */
-  .fullbx-slider.fullbx-m-none {
+  .fullbx-slider {
     @apply py-50 my-50 lgscreen:py-25 lgscreen:my-25;
   }
   .fullbx-slider.fullbx-m-none {
     @apply pt-0 mt-0 lgscreen:pt-0 lgscreen:mt-0;
+  }
+  .fullbx-slider.fullbx-m-none.bg-white-300 {
+    @apply py-100 lgscreen:py-50 pt-0 my-0
   }
   /* fullbx-slider End */
 

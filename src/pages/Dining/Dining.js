@@ -32,7 +32,7 @@ function Dining() {
 			<section className="banner-wrapper small-banner relative">
 				<div className="banner-img w-full h-full block relative overflow-hidden">
 					<div className='img landscape'>
-						<img src="../images/dining-banner.jpg" className='w-full h-full object-cover' width={1440} height={838} alt="Dining" loading='eager' />
+						<img src="../images/dining-banner.jpg" className='w-full h-full object-cover' width={1440} height={677} alt="Dining" loading='eager' />
 					</div>
 				</div>
 				<div className="banner-content flex flex-col justify-end items-center w-full h-full z-1 absolute top-0 left-0">

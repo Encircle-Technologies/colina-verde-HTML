@@ -5,6 +5,7 @@ import Stay from './pages/Stay/Stay';
 import Dining from './pages/Dining/Dining';
 import Active from './pages/Activities/Activities';
 import Story from './pages/Story/Story';
+import ConservationCommunity from './pages/ConservationCommunity/ConservationCommunity';
 
 
 
@@ -20,6 +21,7 @@ function Routing() {
                     <Route path="/dining" element={<Dining />} />
                     <Route path="/activities" element={<Active />} />
                     <Route path="/story" element={<Story />} />
+                    <Route path="/conservationcommunity" element={<ConservationCommunity />} />
                </Routes>
            </Router>
         </>
