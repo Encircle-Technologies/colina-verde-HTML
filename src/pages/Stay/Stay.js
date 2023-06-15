@@ -91,7 +91,7 @@ function Stay() {
                                         </li>
                                     </ul>
 								</div>
-								<div className='btn-custom flex flex-wrap items-center justify-center w-full gap-5 md:gap-[30px]'>
+								<div className='btn-custom flex flex-wrap items-center justify-start mdscreen:justify-center w-full md:gap-x-[30px] gap-y-4'>
 									<Link to="#" className='btn btn-blue-200 smscreen:order-2'>
 										<span>
                                             make an enquiry

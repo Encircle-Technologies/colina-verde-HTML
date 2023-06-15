@@ -76,7 +76,11 @@
 }
 
 .main-nav {
-    @apply fixed w-full h-screen top-0 -z-1 hidden;
+    @apply fixed right-0 w-full smscreen2:w-full h-full pointer-events-none top-0 z-10 -translate-y-[100%];
+}
+
+body.menu-open .main-nav {
+    @apply pointer-events-auto;
 }
 
 .main-nav .navMenu li {
