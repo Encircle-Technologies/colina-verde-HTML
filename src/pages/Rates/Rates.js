@@ -57,11 +57,11 @@ function Rates() {
 			</section>
 			{/* Banner End */}
 
-			{/* Area Grid Start */}
+			{/* accordion Start */}
 			<section className='stay-accordion bg-white-300 relative py-100 lgscreen:py-50'>
 				<div className='container-fluid-md'>
 					<div className='flex flex-wrap items-center justify-between m-0 p-0 w-full relative lgscreen:gap-5 mb-60 lgscreen:mb-40'>
-						<div className='block w-full lg:max-w-[70%]'>
+						<div className='block w-full lg:max-w-[70%] text-center lg:text-left'>
 							<div className='title title-blue-200 mb-15'>
 								<h2>
                                     See our rates below
@@ -73,7 +73,7 @@ function Rates() {
 								</p>
 							</div>
 						</div>
-						<div className='block w-full lg:max-w-[30%] lg:text-right'>
+						<div className='block w-full lg:max-w-[30%] text-center lg:text-right'>
 							<div className='btn-custom'>
 								<Link to="#" className='btn btn-blue-200'>
 									<span>
@@ -89,65 +89,67 @@ function Rates() {
                             <li onClick={() => { setTabOption('rates1') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption == 'rates1') ? 'tab-current' : ''}`}>2023 Rates</li>
                             <li onClick={() => { setTabOption('rates2') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption == 'rates2') ? 'tab-current' : ''}`}>2024 Rates</li>
                         </ul>
-                        <div className="tabs-container">
-                            {tabOption == 'rates1' && <div id="overview" className="tab-content w-full overflow-y-hidden">
-                                <table className='w-full min-w-[1000px] mb-60 lgscreen:mb-40'>
-                                    <tbody>
-                                        <tr>
-                                            <td rowspan="2" colspan="1">
-                                                <span className="txt-b">2023 Rates</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="1">
-                                                <span className="txt-top-l">Up To 6 Guests</span>
-                                                <span className="txt-top">Per Night</span>
-                                            </td>
-                                            <td colspan="1">
-                                                <span className="txt-top-l">Extra Adult</span>
-                                                <span className="txt-top">Per Night</span>
-                                            </td>
-                                            <td colspan="1">
-                                                <span className="txt-top-l">Extra Child</span>
-                                                <span className="txt-top">Per Night</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="1">
-                                                <span className="txt-o mb-[13px]">Peak Season</span>
-                                                <ul>
-                                                    <li>
-                                                        Easter 27th March - 3rd April
-                                                    </li>
-                                                    <li>
-                                                        Christmas 20th December - 5th January 2025
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                            <td colspan="1"><span className="txt-sb">$ 6 500 USD</span></td>
-                                            <td colspan="1"><span className="txt-sb">$ 750 USD</span></td>
-                                            <td colspan="1"><span className="txt-sb">$ 375 USD</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="1">
-                                                <span className="txt-o mb-[13px]">Off Peak Season</span>
-                                                <ul>
-                                                    <li>
-                                                        6th January – 26th March
-                                                    </li>
-                                                    <li>
-                                                        4th April – 19th December 2023
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                            <td colspan="1"><span className="txt-sb">$ 4 500 USD</span></td>
-                                            <td colspan="1"><span className="txt-sb">$ 550 USD</span></td>
-                                            <td colspan="1"><span className="txt-sb">$ 275 USD</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div className='rate-tabs w-full lg:max-w-[751px] mx-auto'>
-                                    <ul className='tabs w-full flex flex-wrap mb-30 gap-x-[2px] gap-y-4'>
+                        <div className="tabs-container">                            
+                            {tabOption == 'rates1' && <div className='tabs-content'>
+                                <div id="overview" className="tab-content w-full overflow-y-hidden lgscreen:cursor-grab pb-30 lgscreen:pb-20 mb-30 lgscreen:mb-20">
+                                    <table className='w-full min-w-[1000px]'>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2" colspan="1">
+                                                    <span className="txt-b">2023 Rates</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1">
+                                                    <span className="txt-top-l">Up To 6 Guests</span>
+                                                    <span className="txt-top">Per Night</span>
+                                                </td>
+                                                <td colspan="1">
+                                                    <span className="txt-top-l">Extra Adult</span>
+                                                    <span className="txt-top">Per Night</span>
+                                                </td>
+                                                <td colspan="1">
+                                                    <span className="txt-top-l">Extra Child</span>
+                                                    <span className="txt-top">Per Night</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1">
+                                                    <span className="txt-o mb-[13px]">Peak Season</span>
+                                                    <ul>
+                                                        <li>
+                                                            Easter 27th March - 3rd April
+                                                        </li>
+                                                        <li>
+                                                            Christmas 20th December - 5th January 2025
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td colspan="1"><span className="txt-sb">$ 6 500 USD</span></td>
+                                                <td colspan="1"><span className="txt-sb">$ 750 USD</span></td>
+                                                <td colspan="1"><span className="txt-sb">$ 375 USD</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1">
+                                                    <span className="txt-o mb-[13px]">Off Peak Season</span>
+                                                    <ul>
+                                                        <li>
+                                                            6th January – 26th March
+                                                        </li>
+                                                        <li>
+                                                            4th April – 19th December 2023
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td colspan="1"><span className="txt-sb">$ 4 500 USD</span></td>
+                                                <td colspan="1"><span className="txt-sb">$ 550 USD</span></td>
+                                                <td colspan="1"><span className="txt-sb">$ 275 USD</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div className='rate-tabs w-full md:max-w-[751px] mx-auto'>
+                                    <ul className='tabs w-full flex flex-row overflow-x-auto pb-15 mb-15 gap-x-[2px] gap-y-4'>
                                         <li onClick={() => { setTabOption2('includes') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption2 == 'includes') ? 'tab-current' : ''}`}>Includes</li>
                                         <li onClick={() => { setTabOption2('excludes') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption2 == 'excludes') ? 'tab-current' : ''}`}>excludes</li>
                                         <li onClick={() => { setTabOption2('children') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption2 == 'children') ? 'tab-current' : ''}`}>Children</li>
@@ -180,69 +182,131 @@ function Rates() {
                                 </div>
                             </div>}
 
-                            {tabOption == 'rates2' && <div id="overview" class="tab-content w-full overflow-y-hidden">
-                                <table className='w-full min-w-[1000px] mb-60 lgscreen:mb-40'>
-                                    <tbody>
-                                        <tr>
-                                            <td rowspan="2" colspan="1">
-                                                <span className="txt-b">2024 Rates</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="1">
-                                                <span className="txt-top-l">Up To 6 Guests</span>
-                                                <span className="txt-top">Per Night</span>
-                                            </td>
-                                            <td colspan="1">
-                                                <span className="txt-top-l">Extra Adult</span>
-                                                <span className="txt-top">Per Night</span>
-                                            </td>
-                                            <td colspan="1">
-                                                <span className="txt-top-l">Extra Child</span>
-                                                <span className="txt-top">Per Night</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="1">
-                                                <span className="txt-o mb-[13px]">Peak Season</span>
-                                                <ul>
-                                                    <li>
-                                                        Easter 27th March - 3rd April
-                                                    </li>
-                                                    <li>
-                                                        Christmas 20th December - 5th January 2025
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                            <td colspan="1"><span className="txt-sb">$ 6 500 USD</span></td>
-                                            <td colspan="1"><span className="txt-sb">$ 750 USD</span></td>
-                                            <td colspan="1"><span className="txt-sb">$ 375 USD</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="1">
-                                                <span className="txt-o mb-[13px]">Off Peak Season</span>
-                                                <ul>
-                                                    <li>
-                                                        6th January – 26th March
-                                                    </li>
-                                                    <li>
-                                                        4th April – 19th December 2023
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                            <td colspan="1"><span className="txt-sb">$ 4 500 USD</span></td>
-                                            <td colspan="1"><span className="txt-sb">$ 550 USD</span></td>
-                                            <td colspan="1"><span className="txt-sb">$ 275 USD</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            {tabOption == 'rates2' && <div className='tabs-content'>
+                                <div id="overview" class="tab-content w-full overflow-y-hidden lgscreen:cursor-grab pb-30 lgscreen:pb-20 mb-30 lgscreen:mb-20">
+                                    <table className='w-full min-w-[1000px]'>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2" colspan="1">
+                                                    <span className="txt-b">2024 Rates</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1">
+                                                    <span className="txt-top-l">Up To 6 Guests</span>
+                                                    <span className="txt-top">Per Night</span>
+                                                </td>
+                                                <td colspan="1">
+                                                    <span className="txt-top-l">Extra Adult</span>
+                                                    <span className="txt-top">Per Night</span>
+                                                </td>
+                                                <td colspan="1">
+                                                    <span className="txt-top-l">Extra Child</span>
+                                                    <span className="txt-top">Per Night</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1">
+                                                    <span className="txt-o mb-[13px]">Peak Season</span>
+                                                    <ul>
+                                                        <li>
+                                                            Easter 27th March - 3rd April
+                                                        </li>
+                                                        <li>
+                                                            Christmas 20th December - 5th January 2025
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td colspan="1"><span className="txt-sb">$ 6 500 USD</span></td>
+                                                <td colspan="1"><span className="txt-sb">$ 750 USD</span></td>
+                                                <td colspan="1"><span className="txt-sb">$ 375 USD</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1">
+                                                    <span className="txt-o mb-[13px]">Off Peak Season</span>
+                                                    <ul>
+                                                        <li>
+                                                            6th January – 26th March
+                                                        </li>
+                                                        <li>
+                                                            4th April – 19th December 2023
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td colspan="1"><span className="txt-sb">$ 4 500 USD</span></td>
+                                                <td colspan="1"><span className="txt-sb">$ 550 USD</span></td>
+                                                <td colspan="1"><span className="txt-sb">$ 275 USD</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div className='rate-tabs w-full md:max-w-[751px] mx-auto'>
+                                    <ul className='tabs w-full flex flex-row overflow-x-auto pb-15 mb-15 gap-x-[2px] gap-y-4'>
+                                        <li onClick={() => { setTabOption2('includes') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption2 == 'includes') ? 'tab-current' : ''}`}>Includes</li>
+                                        <li onClick={() => { setTabOption2('excludes') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption2 == 'excludes') ? 'tab-current' : ''}`}>excludes</li>
+                                        <li onClick={() => { setTabOption2('children') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption2 == 'children') ? 'tab-current' : ''}`}>Children</li>
+                                        <li onClick={() => { setTabOption2('minimum') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption2 == 'minimum') ? 'tab-current' : ''}`}>Minimum stay</li>
+                                        <li onClick={() => { setTabOption2('deposit') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption2 == 'deposit') ? 'tab-current' : ''}`}>deposit</li>
+                                        <li onClick={() => { setTabOption2('activities') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption2 == 'activities') ? 'tab-current' : ''}`}>activities</li>
+                                    </ul>
+                                    {tabOption2 == 'includes' && <div id="overview" className="tab-content w-full overflow-y-hidden">
+                                        <div className='content blue-100 mb-40 last:mb-0 text-center'>
+                                            <p>
+                                                Accommodation, all meals, soft drinks, house wines, local beers and spirits, daily laundry,snorkelling, picnics, use of on site facilities.
+                                            </p>
+                                        </div>
+                                        <div className='btn-custom text-center'>
+                                            <Link to="#" className='btn btn-blue-200 smscreen:order-2'>
+                                                <span className='!flex flex-wrap items-start gap-3'>
+                                                    download rates
+                                                    <img src='../images/download.svg' width='16' height='15' loading='lazy' alt='open in new' className='-mt-[2px]'/>
+                                                </span>                                        
+                                            </Link>
+                                        </div>
+                                    </div>}
+                                    {tabOption2 == 'excludes' && <div id="overview" className="tab-content w-full overflow-y-hidden">
+                                        <div className='content blue-100 mb-40 last:mb-0 text-center'>
+                                            <p>
+                                                Accommodation, all meals, soft drinks, house wines, local beers and spirits, daily laundry,snorkelling, picnics, use of on site facilities.
+                                            </p>
+                                        </div>
+                                    </div>}
+                                </div>
                             </div>}
                         </div>
                     </div>
                     {/* Rates End */}
 				</div>
 			</section>
-			{/* Area Grid End */}
+			{/* accordion End */}
+
+            {/* live availibility Start */}
+            <section className='live-availibility py-50 my-50 lgscreen:my-25 lgscreen:py-25'>
+                <div className='container-fluid-md'>
+					<div className='flex flex-wrap items-center justify-between m-0 p-0 w-full relative lgscreen:gap-5 mb-60 lgscreen:mb-40'>
+						<div className='block w-full lg:max-w-[70%] text-center lg:text-left'>
+							<div className='title title-blue-200 mb-15'>
+								<h2>
+                                    See our Live availibility
+								</h2>
+							</div>
+						</div>
+						<div className='block w-full lg:max-w-[30%] text-center lg:text-right'>
+							<div className='btn-custom'>
+								<Link to="#" className='btn btn-blue-200'>
+									<span>
+										make an enquiry
+									</span>
+								</Link>
+							</div>
+						</div>
+					</div>
+                    <div className='img landscape'>
+                        <img src='../images/live-demo-banner.jpg' width={1300} height={423} loading="lazy" alt="Escape With Us"/>
+                    </div>
+                </div>
+            </section>
+            {/* live availibility End */}
 
 			{/* Fullslider Start */}
 			<section className='fullslider relative'>

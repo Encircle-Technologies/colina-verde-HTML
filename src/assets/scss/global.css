@@ -69,7 +69,8 @@
   .container-fluid-md {
     @apply  px-70 lgscreen:px-40 mdscreen:px-20;
   }
-  .content p {
+  .content p,
+  .content p a {
     @apply font-book font-400 text-16 leading-22 mt-20 first:mt-0;
   }
   .content.white p {
@@ -318,7 +319,7 @@
   }
 
   ul.tabs li {
-    @apply px-15 pb-[8px] relative text-blue-100 text-opacity-60;
+    @apply px-15 pb-[8px] relative text-blue-100 text-opacity-60 flex-0;
   }
   ul.tabs li.tab-current {
     @apply text-blue-100 text-opacity-100;
@@ -754,22 +755,22 @@
   }
   
   .rates tr:first-child td:first-child {
-      @apply border-0 text-left px-[34px]
+      @apply border-0 text-left px-[12px]
   }
 
   .rates .txt-b {
-      @apply block text-blue-100 lgscreen:text-18 lgscreen:leading-22 text-60 leading-[60px] font-primary font-400 m-0 p-0;
+      @apply block text-blue-100 lgscreen:text-38 lgscreen:leading-38 text-60 leading-[60px] font-primary font-400 m-0 p-0;
   }
   .rates .txt-s {
       @apply text-blue-300 text-opacity-90 text-15 leading-22 font-primary font-400 m-0 p-0;
   }
 
   .rates .txt-o {
-      @apply block text-blue-200 text-38 leading-38 font-primary font-400 
+      @apply block text-blue-200 text-38 leading-38 mdscreen:text-28 mdscreen:leading-28 font-primary font-400 
   }
 
   .rates .txt-top-l {
-      @apply block text-blue-200 text-opacity-90 text-38 leading-38 font-primary font-400 m-0 p-0;
+      @apply block text-blue-200 text-opacity-90 text-38 leading-38 mdscreen:text-28 mdscreen:leading-28 font-primary font-400 m-0 p-0;
   }
   .rates .txt-top {
       @apply block text-blue-100 text-16 leading-19 font-book font-400 m-0 p-0 text-opacity-75;
@@ -786,5 +787,21 @@
   .rates .txt-sb {
       @apply block text-blue-100 lgscreen:text-18 lgscreen:leading-22 text-[22px] leading-[30px] font-book font-400 m-0 p-0 text-opacity-75;
   }
+
+  .live-availibility .landscape {
+    @apply block relative overflow-hidden w-full pt-[32.54%] smscreen:pt-[50%];
+  }
   /* Rates End */
+
+  /* offer card Start */
+  .offer-grid .card .img {
+    @apply block relative overflow-hidden w-full;
+  }
+  .offer-grid .card .landscape {
+    @apply pt-[54.80%];
+  }
+  .offer-grid .card .landscape img {
+    @apply absolute inset-0;
+  }
+  /* offer card End */
 }

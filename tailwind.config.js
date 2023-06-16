@@ -24,6 +24,7 @@ module.exports = {
             inherit: 'inherit',   
             none: 'none',
             '2': '2 2 0%',
+            '0': '0 0 auto',
         },
         colors: {
             transparent: 'transparent',

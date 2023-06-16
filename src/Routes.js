@@ -9,6 +9,9 @@ import ConservationCommunity from './pages/ConservationCommunity/ConservationCom
 import TravelTips from './pages/TravelTips/TravelTips';
 import Location from './pages/Location/Location';
 import Rates from './pages/Rates/Rates';
+import Contact from './pages/Contact/Contact';
+import Offers from './pages/Offers/Offers';
+import OffersSingle from './pages/Offers-Single/OffersSingle';
 
 
 
@@ -28,6 +31,9 @@ function Routing() {
                     <Route path="/traveltips" element={<TravelTips />} />
                     <Route path="/location" element={<Location />} />
                     <Route path="/rates" element={<Rates />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/offers" element={<Offers />} />
+                    <Route path="/offerssingle" element={<OffersSingle />} />
                </Routes>
            </Router>
         </>
