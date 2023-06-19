@@ -258,6 +258,9 @@ function Stay() {
 							slidesPerView: 1,
 						},
 						640: {
+							slidesPerView: 1.15,
+						},
+						768: {
 							slidesPerView: 1.61,
 						},
 					}}
@@ -267,7 +270,7 @@ function Stay() {
 						<div className='slide-box'>
 							<img src='../images/luxury-rooms1.jpg' width={856} height={484} loading="lazy" alt="stay1" />
 						</div>
-						<div className='details flex flex-col m-0 p-0 mt-40 justify-center relative w-full'>
+						<div className='details flex flex-col m-0 p-0 md:px-0 px-20 mt-40 justify-center relative w-full'>
 							<div className='w-full md:max-w-[720px] md:mx-auto'>
 								<div className='title-with-content-center'>
 									<div className='title title-blue-100 mb-15'>
@@ -295,7 +298,7 @@ function Stay() {
 						<div className='slide-box'>
 							<img src='../images/luxury-rooms2.jpg' width={856} height={484} loading="lazy" alt="stay1" />
 						</div>
-						<div className='details flex flex-col m-0 p-0 mt-40 justify-center relative w-full'>
+						<div className='details flex flex-col m-0 p-0 md:px-0 px-20 mt-40 justify-center relative w-full'>
 							<div className='w-full md:max-w-[720px] md:mx-auto'>
 								<div className='title-with-content-center'>
 									<div className='title title-blue-100 mb-15'>
@@ -323,7 +326,7 @@ function Stay() {
 						<div className='slide-box'>
 							<img src='../images/luxury-rooms3.jpg' width={856} height={484} loading="lazy" alt="stay3" />
 						</div>
-						<div className='details flex flex-col m-0 p-0 mt-40 justify-center relative w-full'>
+						<div className='details flex flex-col m-0 p-0 md:px-0 px-20 mt-40 justify-center relative w-full'>
 							<div className='w-full md:max-w-[720px] md:mx-auto'>
 								<div className='title-with-content-center'>
 									<div className='title title-blue-100 mb-15'>
@@ -348,14 +351,14 @@ function Stay() {
 						</div>
 					</SwiperSlide>
 					<div className='swiper-arrow'>
-						<a className='button-prev cursor-pointer absolute top-50per translate-y-minus_50 z-9 left-[128px] mdscreen:left-20 smscreen2:left-20' onClick={() => handlePrevClick(".fullbx-slider .swiper")} >
+						<a className='button-prev cursor-pointer absolute top-[29%] md:top-[33%] translate-y-minus_50 z-9 left-[128px] mdscreen:left-20 smscreen2:left-20' onClick={() => handlePrevClick(".fullbx-slider .swiper")} >
 							<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<circle cx="28" cy="28" r="28" transform="rotate(180 28 28)" fill="#224554" fill-opacity="0.2"/>
 								<circle cx="28" cy="28" r="27.5" transform="rotate(180 28 28)" stroke="white" stroke-opacity="0.6" fill='transparent'/>
 								<path d="M25.6008 23.0626C25.6484 22.9199 25.4106 23.1101 25.4581 22.9674C26.0765 22.6345 26.4095 22.2539 27.1706 22.1112C27.2181 22.1112 27.2181 22.0161 27.2181 21.9685C28.0268 21.6831 28.6927 21.1599 29.3111 20.7317C29.3111 20.6842 29.216 20.7793 29.1209 20.8269C29.1209 20.589 29.3587 20.6842 29.4538 20.5415C29.9771 20.5415 30.0722 20.1609 30.4528 20.0182C30.5479 20.0182 30.3576 19.9707 30.4052 19.9231C31.2614 19.5901 31.7847 18.8766 32.736 18.6863L32.736 19.162C32.8312 19.2571 32.8787 18.8766 32.9263 19.0193C32.9263 19.162 32.9263 19.2571 32.8787 19.3523C33.0214 19.3998 33.0214 19.2571 33.1641 19.2571C33.1641 19.3998 33.069 19.4474 33.0214 19.495C33.069 19.5901 33.1641 19.5901 33.3068 19.5425C33.2117 19.6377 33.1641 19.6852 33.1641 19.7328C33.3068 19.7328 33.3544 19.6852 33.4496 19.6852C33.2117 20.7317 32.2128 21.1599 31.4041 21.8734C31.1187 21.9209 31.0711 22.1112 30.7382 22.2064C28.4073 23.9188 26.0289 25.5361 23.0322 26.8204C23.6981 27.3437 24.4592 27.6767 25.03 28.2475C25.2203 28.1999 25.2203 28.4378 25.4106 28.3902C25.4106 28.5805 25.6484 28.5329 25.6484 28.7232L26.4571 29.1988C26.1716 28.9134 25.9814 28.5329 25.5533 28.3426C25.9338 28.3902 26.3143 28.5805 26.5522 28.8183L26.7425 28.8659L33.1166 32.9567C33.402 33.6702 33.0214 34.1459 32.9263 34.7167C32.8787 34.7167 32.8312 34.7167 32.7836 34.7643C32.7836 35.0021 32.5458 35.3827 32.2604 35.573C31.9274 35.6681 31.8798 35.9535 31.4993 35.8584C27.8841 33.7178 24.7446 31.1491 21.4148 28.6756L21.2246 28.6756C21.0343 28.3426 20.6538 28.3426 20.5586 27.9145C20.5111 27.9145 20.3683 27.8669 20.2732 27.7718C20.1305 26.868 20.7965 26.6302 21.0819 25.9642C21.0343 25.1556 21.8905 24.9177 22.4613 24.442C23.3176 24.1091 24.0787 23.681 25.0776 23.3956C25.1251 23.2528 25.363 23.1577 25.6008 23.0626Z" fill="white"/>
 							</svg>
 						</a>
-						<a className='button-next cursor-pointer absolute top-50per translate-y-minus_50 z-9 right-[128px] mdscreen:right-20 smscreen2:right-20' onClick={() => handleNextClick(".fullbx-slider .swiper")} >
+						<a className='button-next cursor-pointer absolute top-[29%] md:top-[33%] translate-y-minus_50 z-9 right-[128px] mdscreen:right-20 smscreen2:right-20' onClick={() => handleNextClick(".fullbx-slider .swiper")} >
 							<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<circle cx="28" cy="28" r="28" fill="#224554" fill-opacity="0.2"/>
 								<circle cx="28" cy="28" r="27.5" stroke="white" stroke-opacity="0.6" fill='transparent'/>

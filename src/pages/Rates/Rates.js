@@ -85,7 +85,7 @@ function Rates() {
 					</div>
 					{/* Rates Start */}
                     <div className='rates'>
-                        <ul className='tabs w-full flex flex-wrap mb-40 lg:mb-60 gap-x-5 gap-y-5'>
+                        <ul className='tabs w-full flex flex-row overflow-y-hidden mb-40 lg:mb-60 gap-x-5 gap-y-5'>
                             <li onClick={() => { setTabOption('rates1') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption == 'rates1') ? 'tab-current' : ''}`}>2023 Rates</li>
                             <li onClick={() => { setTabOption('rates2') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption == 'rates2') ? 'tab-current' : ''}`}>2024 Rates</li>
                         </ul>
@@ -241,7 +241,7 @@ function Rates() {
                                     </table>
                                 </div>
                                 <div className='rate-tabs w-full md:max-w-[751px] mx-auto'>
-                                    <ul className='tabs w-full flex flex-row overflow-x-auto pb-15 mb-15 gap-x-[2px] gap-y-4'>
+                                    <ul className='tabs w-full flex flex-row overflow-y-hidden pb-15 mb-15 gap-x-[2px] gap-y-4'>
                                         <li onClick={() => { setTabOption2('includes') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption2 == 'includes') ? 'tab-current' : ''}`}>Includes</li>
                                         <li onClick={() => { setTabOption2('excludes') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption2 == 'excludes') ? 'tab-current' : ''}`}>excludes</li>
                                         <li onClick={() => { setTabOption2('children') }} className={`tab-link cursor-pointer text-16 tracking-04em text-blue-100 text-opacity-60 font-900 uppercase font-bold ${(tabOption2 == 'children') ? 'tab-current' : ''}`}>Children</li>

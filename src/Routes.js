@@ -12,6 +12,9 @@ import Rates from './pages/Rates/Rates';
 import Contact from './pages/Contact/Contact';
 import Offers from './pages/Offers/Offers';
 import OffersSingle from './pages/Offers-Single/OffersSingle';
+import OurStories from './pages/Our Stories/OurStories';
+import Gallery from './pages/Gallery/Gallery';
+import Legal from './pages/Legal/Legal';
 
 
 
@@ -34,6 +37,9 @@ function Routing() {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/offers" element={<Offers />} />
                     <Route path="/offerssingle" element={<OffersSingle />} />
+                    <Route path="/ourstories" element={<OurStories />} />
+                    <Route path="/gallery" element={<Gallery />} />
+                    <Route path="/legal" element={<Legal />} />
                </Routes>
            </Router>
         </>

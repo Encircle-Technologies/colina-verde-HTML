@@ -256,6 +256,10 @@
     @apply text-blue-100 capitalize;
   }
 
+  .title span {
+    @apply text-12 font-secondary font-500 italic leading-16 text-blue-200 uppercase
+  }
+
   .title-blue-200 h1,
   .title-blue-200 h2,
   .title-blue-200 h3,
@@ -464,13 +468,13 @@
     @apply block relative overflow-hidden transition-all duration-300 delay-150 ease-linear;
   }
   .collectionSlider .slide-box {
-    @apply block relative overflow-hidden transition-all duration-300 delay-150 ease-linear w-full md:h-[484px] h-[384x] ;
+    @apply block relative overflow-hidden transition-all duration-300 delay-150 ease-linear w-full md:h-[484px] h-[384px] ;
   }
   .collectionSlider .slide-box > img {
     @apply w-full h-full object-cover;
   }
   .collectionSlider .swiper-slide .details {
-    @apply opacity-0 duration-300 delay-150 ease-linear;
+    @apply md:opacity-0 duration-300 delay-150 ease-linear;
   }
   .collectionSlider .swiper-slide.swiper-slide-active .details {
     @apply opacity-100
@@ -620,6 +624,15 @@
     @apply absolute inset-0;
   }
   /* explore card End */
+
+  /* activities slider Start */
+  .activities-slider .slide-box a {
+    @apply block
+  }
+  .activities-slider .slide-box img {
+    @apply h-[304px] md:h-full md:max-h-[304px] block;
+  }
+  /* activities slider End */
 
   /* stay Grid Start */
   .stay-grid .stay-box {
@@ -804,4 +817,32 @@
     @apply absolute inset-0;
   }
   /* offer card End */
+
+  /* Story Start */
+  .story-single-list .img {
+    @apply relative overflow-hidden w-full block;
+  }
+  .story-single-list .landscape {
+    @apply pt-[59.39%];
+  }
+
+  .story-list .img {
+    @apply relative overflow-hidden w-full block;
+  }
+  .story-list .landscape {
+    @apply pt-[59.39%];
+  }
+  .btn-loadmore {
+    @apply opacity-60 hover:opacity-100 duration-300 delay-150 ease-linear;
+  }
+  /* Story End */
+
+  /* Gallery Start */
+  .gallery-grid .img {
+    @apply relative overflow-hidden w-full block;
+  }
+  .gallery-grid .landscape {
+    @apply pt-[75.97%]
+  }
+  /* Gallery End */
 }

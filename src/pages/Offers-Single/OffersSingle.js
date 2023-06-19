@@ -15,7 +15,7 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Navigation, Autoplay } from "swiper";
 
 function OffersSingle() {
-
+	const [tabOption, setTabOption] = useState('includes');
     const handleNextClick = (selector) => {
 		const swiper = document.querySelector(selector).swiper;
 		swiper.slideNext();
@@ -119,17 +119,17 @@ function OffersSingle() {
 					className="experienceSlider">
 					<SwiperSlide>
 						<div className='slide-box'>
-							<img src='../images/location-slide1.jpg' width={525} height={304} loading="lazy" alt="location"/>
+							<img src='../images/offer-slide1.jpg' width={525} height={304} loading="lazy" alt="offer"/>
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
 						<div className='slide-box'>
-							<img src='../images/location-slide2.jpg' width={525} height={304} loading="lazy" alt="location"/>
+							<img src='../images/offer-slide2.jpg' width={525} height={304} loading="lazy" alt="offer"/>
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
 						<div className='slide-box'>
-							<img src='../images/location-slide3.jpg' width={525} height={304} loading="lazy" alt="location"/>
+							<img src='../images/offer-slide3.jpg' width={525} height={304} loading="lazy" alt="offer"/>
 						</div>
 					</SwiperSlide>
 					<div className='swiper-arrow'>
@@ -153,44 +153,64 @@ function OffersSingle() {
 			{/* collection slider End */}
 
             {/* zigzagsingleslider Start */}
-			<section className='zigzag-content right-img py-50 my-50 lgscreen:my-25 lgscreen:py-25'>
+			<section className='zigzag-content-slide right-img py-50 my-50 lgscreen:my-25 lgscreen:py-25'>
 				<div className='container-fluid-md'>
 					<div className='flex flex-wrap items-center w-full m-0 p-0 relative lg:gap-0 gap-8'>
 						<div className='w-full lg:w-6/12 lg:order-2 order-1'>
-							<div className='img portrait'>
-								<img src="../images/getting-to-us.jpg" width={635} height={631} loading="lazy" alt="Estamos Juntos Community Projects" />
+							<div className='slide-box'>
+								<div className='img portrait'>
+									<img src="../images/terms-conditions.jpg" width={635} height={631} loading="lazy" alt="Terms & Conditions" />
+								</div>
 							</div>
-                            <div className='flex flex-wrap items-center m-0 mt-[12px] p-0 justify-end gap-[14px]'>
-                                <Link to='/' className='inline-block text-14 leading-19 text-blue-200 font-book font-400 italic hover:opacity-70 duration-300 delay-150 ease-linear'>
-                                    Click to Zoom In on Our Location
-                                    <img src="../images/fullscreen.svg" width={14} height={14} loading="lazy" alt="Fullscreen" className='inline-block align-middle -mt-5 ml-15' />
-                                </Link>
-                            </div>
 						</div>
 						<div className='w-full lg:w-6/12 lg:order-1 order-2'>
-							<div className='max-w-[473px] xlscreen:max-w-[373px] lgscreen:max-w-full mx-auto'>
+							<div className='max-w-[473px] xlscreen:max-w-[325px] lgscreen:max-w-full mx-auto'>
 								<div className='title title-blue-100 mb-25 lgscreen:mb-15'>
 									<h2>
-                                        Getting to Us
+										Terms & Conditions
 									</h2>
 								</div>
-								<div className='content blue-100 mb-40 last:mb-0'>
-									<p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-									</p>
-                                    <p>
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </p>
-								</div>
-                                <div className='btn-custom flex flex-wrap items-center justify-start mdscreen:justify-center w-full md:gap-x-[30px] gap-y-4'>
-									<Link to="#" className='btn btn-blue-200 smscreen:order-2'>
-										<span className='!flex flex-wrap items-start gap-3'>
+								<ul className='tabs w-full flex flex-row overflow-y-hidden items-center justify-start gap-x-[13px] gap-y-[13px]'>
+                                    <li onClick={() => { setTabOption('includes') }} className={`tab-link cursor-pointer text-16 leading-22 tracking-04em uppercase font-bold font-900 ${(tabOption == 'includes') ? 'tab-current' : ''}`}>Includes</li>
+                                    <li onClick={() => { setTabOption('excludes') }} className={`tab-link cursor-pointer text-16 leading-22 tracking-04em uppercase font-bold font-900 ${(tabOption == 'excludes') ? 'tab-current' : ''}`}>excludes</li>
+									<li onClick={() => { setTabOption('conditions') }} className={`tab-link cursor-pointer text-16 leading-22 tracking-04em uppercase font-bold font-900 ${(tabOption == 'conditions') ? 'tab-current' : ''}`}>Conditions</li>
+                                </ul>
+                                <div className="tabs-container mt-20 mb-40 last:mb-0">
+                                    {tabOption == 'includes' && <div id="overview" className="tab-content">
+                                        <div className='content blue-100 mb-15 last:mb-0'>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            </p>
+                                        </div>
+                                        <div className='global-list'>
+                                            <ul>
+                                                <li>
+                                                    Lorem ipsum dolor sit amet, consectetur
+                                                </li>
+                                                <li>
+                                                    Lorem ipsum dolor sit amet, consectetur
+                                                </li>
+                                                <li>
+                                                    Lorem ipsum dolor sit amet, consectetur
+                                                </li>
+                                                <li>
+                                                    Lorem ipsum dolor sit amet, consectetur
+                                                </li>
+                                                <li>
+                                                    Lorem ipsum dolor sit amet, consectetur
+                                                </li>
+                                                <li>
+                                                    Lorem ipsum dolor sit amet, consectetur
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>}
+                                </div>
+								<div className='btn-custom'>
+									<Link to="#" className='btn btn-blue-200'>
+                                        <span>
                                             make an enquiry
-                                            <img src='../images/open_in_new.svg' width='12' height='12' loading='lazy' alt='open in new'/>
-										</span>                                        
-									</Link>
-									<Link to="#" className='btn btn-blue-200-link smscreen:order-1 mt-[9px]'>
-                                        Transfer options
+                                        </span>
 									</Link>
 								</div>
 							</div>
@@ -229,67 +249,7 @@ function OffersSingle() {
 					<img src='../images/Escape-With-Us.jpg' width={1440} height={708} loading="lazy" alt="Escape With Us"/>
 				</div>
 			</section>
-			{/* Fullslider End */}
-
-			{/* explore grid Start */}
-            <section className='explore-grid bg-white-300 py-100 lgscreen:py-50'>
-                <div className='container-fluid-md'>
-                    <div className='flex flex-wrap items-center justify-center w-full m-0 p-0'>
-                        <div className='title title-blue-200 mb-50 lgscreen:mb-30'>
-                            <h2 className='big'>
-                                Explore Colina Verde
-                            </h2>
-                        </div>
-                    </div>
-                    <div className='grid grid-cols-2 mdscreen:grid-cols-1 relative w-full m-0 p-0 gap-7 lgscreen:gap-10'>
-                        <div className='card'>
-                            <div className='img landscape mb-[30px]'>
-                                <img src='../images/stay1.jpg' width={635} height={348} loading="lazy"  alt=''/>
-                            </div>
-                            <div className='flex flex-col w-full m-0 p-0 items-center justify-center text-center relative'>
-                                <div className='title title-blue-200 mb-[12px]'>
-                                    <h2>
-										Stay
-                                    </h2>
-                                </div>
-                                <div className='content blue-100 mb-30 last:mb-0 mx-auto w-full max-w-[412px]'>
-                                    <p>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                    </p>
-                                </div>
-                                <div className='btn-custom'>
-                                    <Link to='/'className='btn btn-blue-200-link'>
-										Explore your stay
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='card'>
-                            <div className='img landscape mb-[30px]'>
-                                <img src='../images/ex-activities.jpg' width={635} height={348} loading="lazy"  alt=''/>
-                            </div>
-                            <div className='flex flex-col w-full m-0 p-0 items-center justify-center text-center relative'>
-                                <div className='title title-blue-200 mb-[12px]'>
-                                    <h2>
-                                        Activities
-                                    </h2>
-                                </div>
-                                <div className='content blue-100 mb-30 last:mb-0 mx-auto w-full max-w-[412px]'>
-                                    <p>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                    </p>
-                                </div>
-                                <div className='btn-custom'>
-                                    <Link to='/'className='btn btn-blue-200-link'>
-                                        Explore location
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            {/* explore grid End */}			
+			{/* Fullslider End */}			
 
 			{/* followus Start */}
 			<section className='followus py-100 lgscreen:py-50'>
